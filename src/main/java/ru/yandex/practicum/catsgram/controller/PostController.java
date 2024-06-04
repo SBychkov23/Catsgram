@@ -45,7 +45,7 @@ public class PostController {
         return ++currentMaxId;
     }
     @PutMapping
-    public Post update(@RequestBody Post newPost) throws NotFoundException {
+    public Post update(@RequestBody Post newPost) {
         // проверяем необходимые условия
         if (newPost.getId() == null) {
             throw new ConditionsNotMetException("Id должен быть указан");
